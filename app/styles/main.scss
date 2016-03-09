@@ -1,0 +1,270 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$fa-font-path: "/bower_components/font-awesome/fonts/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "font-awesome/scss/font-awesome.scss";
+// endbower
+@import "compass/css3";
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #F2F1EF;
+}
+
+.container {
+    padding: 0;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.btn-background {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding: 50% 0 0 0;
+}
+
+#downButton {
+    background-image: url(../images/down-02-02.png);
+}
+
+#depressedButton {
+    background-image: url(../images/depressed-06-05.png);
+}
+
+#worthlessButton {
+    background-image: url(../images/worthless-05-05.png);
+}
+
+#anxietyButton {
+    background-image: url(../images/anxiety-01-01.png);
+}
+
+#panicButton {
+    background-image: url(../images/PANIC-06-06.png);
+}
+
+#uglyButton {
+    background-image: url(../images/ugly-04.png);
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.home-btn {
+    margin: auto;
+    text-align: center;
+}
+
+#homeButton{
+    background-image: url(../images/home.png);
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+}
+
+#refreshButton{
+    background-image: url(../images/update.png);
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+}
+
+.well {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.result{
+    min-height: 100%;
+}
+
+.inspirationimage {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding-bottom: 20px;
+}
+
+.footer::before{
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.verticalcenter {
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  -webkit-transition: -webkit-transform .7s ease-in-out;
+  transition: transform .7s ease-in-out;
+}
+
+[ui-view].ng-enter {
+  z-index: 101;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+[ui-view].ng-enter-active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+[ui-view].ng-leave {
+  z-index: 100;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+[ui-view].ng-leave-active {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+*/
+
+.page {
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+
+/* ANIMATIONS
+============================================================================= */
+
+
+/* leaving animations ----------------------------------------- */
+
+
+/* rotate and fall */
+
+@keyframes rotateFall {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    20% {
+        transform: rotateZ(10deg);
+        animation-timing-function: ease-out;
+    }
+    40% {
+        transform: rotateZ(17deg);
+    }
+    60% {
+        transform: rotateZ(16deg);
+    }
+    100% {
+        transform: translateY(100%) rotateZ(17deg);
+    }
+}
+
+
+/* älä koske */
+
+@keyframes slideOutToLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* entering animations --------------------------------------- */
+
+
+/* slide in from the right */
+
+
+/* älä koske */
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* slide in from the bottom */
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.ng-enter {
+    z-index: 8888;
+}
+
+.ng-leave {
+    z-index: 7000;
+}
+
+.page-main.ng-enter {
+    animation: slideInFromLeft 0.5s both ease-in;
+    z-index: 9999;
+}
+
+.page-main.ng-leave {
+    animation: slideOutToLeft 0.5s both ease-in;
+}
+
+.page-result.ng-enter {
+    animation: slideInFromRight 0.5s both ease-in;
+}
+
+
+/*
+.page-result.ng-leave {
+    animation: slideInRight 0.5s both ease-in;
+    z-index: 7000;
+}
+*/

@@ -1,0 +1,72 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+// add files to customize bootstrap
+@import "_custom-fonts.scss";
+@import "_custom-variables.scss";
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+// your own css/scss
+// your own css/scss ends
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    padding: 0;
+}
+
+.nopadding{
+    padding: 0;
+}
+
+.btn-background{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding: 50% 0 0 0;
+}
+
+#downButton{
+    background-image: url(../images/down-02-02.png);
+}
+
+#depressedButton{
+    background-image: url(../images/depressed-06-05.png);
+}
+
+#worthlessButton{
+    background-image: url(../images/worthless-05-05.png);
+}
+
+#anxietyButton{
+    background-image: url(../images/anxiety-01-01.png);
+}
+
+#panicButton{
+    background-image: url(../images/PANIC-06-06.png);
+}
+
+#uglyButton{
+    background-image: url(../images/ugly-04.png);
+}
+
+.btn{
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.well{
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.well img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
